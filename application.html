@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DESIGN CODE IT</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+
+        
+</head>
+
+<body class="bg-deep-navy text-text-light">
+    <div id="atmosphere"></div>
+    <header class="fixed top-0 left-0 right-0 z-50 bg-deep-navy/90 backdrop-blur-sm shadow-lg border-b border-deep-purple/50">
+        <nav class="container mx-auto px-4 sm:px-6 lg:px-8 py-5 flex justify-between items-center">
+            <a href="#" class="text-3xl font-bold text-accent-blue tracking-wider">
+                <i class="fas fa-rocket mr-2"></i>DESIGN CODE IT
+            </a>
+            
+            <div class="hidden md:flex space-x-10 text-text-light text-base font-medium"> 
+                <a href="index.html" class="hover:text-accent-blue transition duration-300 hover-underline">Home</a>
+                <a href="about-us.html" class="hover:text-accent-blue transition duration-300 hover-underline">About Us</a>
+                <a href="product.html" class="hover:text-accent-blue transition duration-300 hover-underline">Products</a>
+                <a href="pricing.html" class="hover:text-accent-blue transition duration-300 hover-underline">Pricing</a>
+                
+                <div class="relative group">
+                    <a href="service.html" class="hover:text-accent-blue transition duration-300 hover-underline flex items-center">
+                        Services
+                        <i class="fas fa-chevron-down ml-1 text-xs transition-transform duration-300 group-hover:rotate-180"></i>
+                    </a>
+                    
+                    <div class="dropdown-menu absolute left-1/2 -translate-x-1/2 mt-3 w-screen max-w-3xl bg-deep-navy border border-deep-purple/50 rounded-lg shadow-xl opacity-0 scale-95 pointer-events-none group-hover:opacity-100 group-hover:scale-100 group-hover:pointer-events-auto origin-top transition duration-300 z-50">
+                        <div class="p-6">
+                            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                                
+                                <div>
+                                    <h4 class="font-bold text-white mb-3 border-b border-deep-purple/50 pb-2">Core Services</h4>
+                                    <ul class="space-y-1">
+                                        <li>
+                                            <a href="#" class="flex items-center p-2 -mx-2 rounded-md text-text-light hover:bg-deep-purple/50 transition duration-200">
+                                                <i class="fas fa-code w-6 text-center mr-2 text-accent-blue"></i>
+                                                Web Development
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="flex items-center p-2 -mx-2 rounded-md text-text-light hover:bg-deep-purple/50 transition duration-200">
+                                                <i class="fas fa-mobile-alt w-6 text-center mr-2 text-accent-blue"></i>
+                                                Mobile Apps
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="flex items-center p-2 -mx-2 rounded-md text-text-light hover:bg-deep-purple/50 transition duration-200">
+                                                <i class="fas fa-pencil-ruler w-6 text-center mr-2 text-accent-blue"></i>
+                                                UI/UX Design
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div>
+                                    <h4 class="font-bold text-white mb-3 border-b border-deep-purple/50 pb-2">Specialized</h4>
+                                    <ul class="space-y-1">
+                                        <li><a href="#" class="block p-2 -mx-2 rounded-md text-text-light hover:bg-deep-purple/50 transition duration-200">Cloud Infrastructure</a></li>
+                                        <li><a href="#" class="block p-2 -mx-2 rounded-md text-text-light hover:bg-deep-purple/50 transition duration-200">AI & Machine Learning</a></li>
+                                        <li><a href="#" class="block p-2 -mx-2 rounded-md text-text-light hover:bg-deep-purple/50 transition duration-200">DevOps Consulting</a></li>
+                                        <li><a href="#" class="block p-2 -mx-2 rounded-md text-text-light hover:bg-deep-purple/50 transition duration-200">Data Analytics</a></li>
+                                    </ul>
+                                </div>
+
+                                <div>
+                                    <h4 class="font-bold text-white mb-3 border-b border-deep-purple/50 pb-2">Featured</h4>
+                                    <div class="bg-deep-purple/30 p-4 rounded-lg hover:bg-deep-purple/50 transition">
+                                        <i class="fas fa-star text-accent-blue text-2xl mb-2"></i>
+                                        <h5 class="font-semibold text-white">Quantum Core</h5>
+                                        <p class="text-sm text-text-muted">Our next-gen processing solution.</p>
+                                        <a href="#" class="text-sm text-accent-blue hover:underline mt-2 inline-block">Learn More &rarr;</a>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a href="faq.html" class="hover:text-accent-blue transition duration-300 hover-underline">FAQ</a>
+                <a href="application.html" class="hover:text-accent-blue transition duration-300 hover-underline">Applications</a>
+                
+                <a href="#" class="px-4 py-1.5 -mt-1 text-base font-semibold border-2 border-accent-blue text-accent-blue rounded-lg 
+                                      transition duration-300 ease-in-out transform 
+                                      hover:bg-accent-blue/20 hover:text-white hover:shadow-lg hover:shadow-accent-blue/30">
+                    Client Login
+                </a>
+                </div>
+
+            <button class="md:hidden text-text-light text-xl hover:text-accent-blue transition duration-300" id="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+        
+        <div id="mobile-menu" class="hidden md:hidden bg-deep-navy/95 border-t border-deep-purple/50 text-base">
+            <a href="about-us.html" class="block py-3 px-6 hover:bg-deep-purple transition duration-200">About Us</a>
+            <a href="#services" class="block py-3 px-6 bg-deep-purple/20 transition duration-200 font-semibold">Services</a>
+            <a href="#service-web" class="block py-1 pl-10 text-sm hover:bg-deep-purple/50 transition duration-200">Web Development</a>
+            <a href="#service-mobile" class="block py-1 pl-10 text-sm hover:bg-deep-purple/50 transition duration-200">Mobile Apps</a>
+            <a href="#service-design" class="block py-1 pl-10 text-sm hover:bg-deep-purple/50 transition duration-200">UI/UX Design</a>
+            <a href="#service-cloud" class="block py-1 pl-10 text-sm hover:bg-deep-purple/50 transition duration-200">Cloud Infrastructure</a>
+            <a href="#faq" class="block py-3 px-6 hover:bg-deep-purple transition duration-200">FAQ</a>
+            <a href="#contact" class="block py-3 px-6 hover:bg-deep-purple transition duration-200">Book a Demo</a>
+        </div>
+    </header>
+
+    <section class="pt-32 py-20 bg-deep-navy" data-section>
+        <div class="container mx-auto px-4">
+            <h1 class="text-4xl md:text-6xl font-bold text-center mb-16 text-white" data-animation-class="animate-fade-up">
+                Our <span class="text-4xl md:text-6xl font-bold text-accent-blue">Applications</span>
+            </h1>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                
+                <div class="group p-8 bg-gradient-to-br from-deep-navy to-deep-purple/20 shadow-2xl transition duration-500 ease-in-out hover:scale-[1.02] hover:-translate-y-2 hover:shadow-[0_10px_30px_rgba(77,29,124,0.5)] corner-border-card" data-animation-class="animate-fade-up" data-animation-delay="0.1">
+                    <span class="corner-border-span absolute inset-0"></span>
+                    
+                    <div class="text-4xl text-accent-blue mb-4"><i class="fas fa-bolt"></i></div>
+                    
+                    <h3 class="text-xl font-semibold mb-3 text-white">Hyper Speed</h3>
+                    <p class="text-text-muted">Lightning-fast performance powered by cutting-edge infrastructure.</p>
+                </div>
+
+                <div class="group p-8 bg-gradient-to-br from-deep-navy to-deep-purple/20 shadow-2xl transition duration-500 ease-in-out hover:scale-[1.02] hover:-translate-y-2 hover:shadow-[0_10px_30px_rgba(77,29,124,0.5)] corner-border-card" data-animation-class="animate-fade-up" data-animation-delay="0.3">
+                    <span class="corner-border-span absolute inset-0"></span>
+
+                    <div class="text-4xl text-accent-blue mb-4"><i class="fas fa-shield-alt"></i></div>
+                    
+                    <h3 class="text-xl font-semibold mb-3 text-white">Zero Downtime</h3>
+                    <p class="text-text-muted">Reliable, secure systems with a guaranteed 99.99% uptime service level.</p>
+                </div>
+
+                <div class="group p-8 bg-gradient-to-br from-deep-navy to-deep-purple/20 shadow-2xl transition duration-500 ease-in-out hover:scale-[1.02] hover:-translate-y-2 hover:shadow-[0_10px_30px_rgba(77,29,124,0.5)] corner-border-card" data-animation-class="animate-fade-up" data-animation-delay="0.5">
+                    <span class="corner-border-span absolute inset-0"></span>
+
+                    <div class="text-4xl text-accent-blue mb-4"><i class="fas fa-rocket"></i></div>
+                    
+                    <h3 class="text-xl font-semibold mb-3 text-white">Scalable Growth</h3>
+                    <p class="text-text-muted">Effortlessly scale resources up or down to meet your evolving demands.</p>
+                </div>
+
+                <div class="group p-8 bg-gradient-to-br from-deep-navy to-deep-purple/20 shadow-2xl transition duration-500 ease-in-out hover:scale-[1.02] hover:-translate-y-2 hover:shadow-[0_10px_30px_rgba(77,29,124,0.5)] corner-border-card" data-animation-class="animate-fade-up" data-animation-delay="0.7">
+                    <span class="corner-border-span absolute inset-0"></span>
+
+                    <div class="text-4xl text-accent-blue mb-4"><i class="fas fa-cogs"></i></div>
+                    
+                    <h3 class="text-xl font-semibold mb-3 text-white">Full Automation</h3>
+                    <p class="text-text-muted">Automated workflows to save time and reduce manual configuration errors.</p>
+                </div>
+                <div class="group p-8 bg-gradient-to-br from-deep-navy to-deep-purple/20 shadow-2xl transition duration-500 ease-in-out hover:scale-[1.02] hover:-translate-y-2 hover:shadow-[0_10px_30px_rgba(77,29,124,0.5)] corner-border-card" data-animation-class="animate-fade-up" data-animation-delay="0.9">
+                <span class="corner-border-span absolute inset-0"></span>
+                <div class="text-4xl text-accent-blue mb-4"><i class="fas fa-cloud"></i></div>
+                <h3 class="text-xl font-semibold mb-3 text-white">Cloud Integration</h3>
+                <p class="text-text-muted">Seamlessly connect across cloud environments for unified operations.</p>
+            </div>
+
+            <div class="group p-8 bg-gradient-to-br from-deep-navy to-deep-purple/20 shadow-2xl transition duration-500 ease-in-out hover:scale-[1.02] hover:-translate-y-2 hover:shadow-[0_10px_30px_rgba(77,29,124,0.5)] corner-border-card" data-animation-class="animate-fade-up" data-animation-delay="1.1">
+                <span class="corner-border-span absolute inset-0"></span>
+                <div class="text-4xl text-accent-blue mb-4"><i class="fas fa-database"></i></div>
+                <h3 class="text-xl font-semibold mb-3 text-white">Data Intelligence</h3>
+                <p class="text-text-muted">Harness real-time analytics to make smarter, faster business decisions.</p>
+            </div>
+
+            <div class="group p-8 bg-gradient-to-br from-deep-navy to-deep-purple/20 shadow-2xl transition duration-500 ease-in-out hover:scale-[1.02] hover:-translate-y-2 hover:shadow-[0_10px_30px_rgba(77,29,124,0.5)] corner-border-card" data-animation-class="animate-fade-up" data-animation-delay="1.3">
+                <span class="corner-border-span absolute inset-0"></span>
+                <div class="text-4xl text-accent-blue mb-4"><i class="fas fa-users"></i></div>
+                <h3 class="text-xl font-semibold mb-3 text-white">Team Collaboration</h3>
+                <p class="text-text-muted">Boost productivity with integrated tools for seamless teamwork.</p>
+            </div>
+
+            <div class="group p-8 bg-gradient-to-br from-deep-navy to-deep-purple/20 shadow-2xl transition duration-500 ease-in-out hover:scale-[1.02] hover:-translate-y-2 hover:shadow-[0_10px_30px_rgba(77,29,124,0.5)] corner-border-card" data-animation-class="animate-fade-up" data-animation-delay="1.5">
+                <span class="corner-border-span absolute inset-0"></span>
+                <div class="text-4xl text-accent-blue mb-4"><i class="fas fa-lock"></i></div>
+                <h3 class="text-xl font-semibold mb-3 text-white">Advanced Security</h3>
+                <p class="text-text-muted">Protect your data with end-to-end encryption and AI threat detection.</p>
+            </div>
+            </div>
+        </div>
+    </section>
+
+
+    <footer id="contact" class="bg-gradient-to-r from-gradient-start to-deep-purple border-t border-deep-purple/60 py-12">
+        <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div class="col-span-1 md:col-span-2">
+                <a href="#" class="text-3xl font-bold text-accent-blue tracking-wider mb-4 block">
+                    <i class="fas fa-rocket mr-2"></i>DESIGN CODE IT
+                </a>
+                <p class="text-text-muted max-w-xs">Pioneering the next era of digital infrastructure with elegance and power.</p>
+            </div>
+            <div>
+                <h4 class="text-xl font-semibold text-white mb-4">Quick Links</h4>
+                <ul class="space-y-2">
+                    <li><a href="about-us.html" class="text-text-muted hover:text-accent-blue transition duration-300">About Us</a></li>
+                    <li><a href="service.html" class="text-text-muted hover:text-accent-blue transition duration-300">Services</a></li>
+                    <li><a href="product.html" class="text-text-muted hover:text-accent-blue transition duration-300">Products</a></li>
+                    <li><a href="faq.html" class="text-text-muted hover:text-accent-blue transition duration-300">FAQ</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-xl font-semibold text-white mb-4">Connect</h4>
+                <div class="flex space-x-4 text-2xl">
+                    <a href="#" class="text-text-muted hover:text-accent-blue transition duration-300 transform hover:scale-125"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="text-text-muted hover:text-accent-blue transition duration-300 transform hover:scale-125"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="text-text-muted hover:text-accent-blue transition duration-300 transform hover:scale-125"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="text-text-muted hover:text-accent-blue transition duration-300 transform hover:scale-125"><i class="fab fa-youtube"></i></a>
+                </div>
+                <p class="text-sm text-text-muted mt-6">&copy; 2025 DESIGN CODE IT. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>  
+</body>
+</html>

@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DESIGN CODE IT</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+
+        
+</head>
+
+<body class="bg-deep-navy text-text-light">
+    <div id="atmosphere"></div>
+    <header class="fixed top-0 left-0 right-0 z-50 bg-deep-navy/90 backdrop-blur-sm shadow-lg border-b border-deep-purple/50">
+        <nav class="container mx-auto px-4 sm:px-6 lg:px-8 py-5 flex justify-between items-center">
+            <a href="#" class="text-3xl font-bold text-accent-blue tracking-wider">
+                <i class="fas fa-rocket mr-2"></i>DESIGN CODE IT
+            </a>
+            
+            <div class="hidden md:flex space-x-10 text-text-light text-base font-medium"> 
+                <a href="index.html" class="hover:text-accent-blue transition duration-300 hover-underline">Home</a>
+                <a href="about-us.html" class="hover:text-accent-blue transition duration-300 hover-underline">About Us</a>
+                <a href="product.html" class="hover:text-accent-blue transition duration-300 hover-underline">Products</a>
+                <a href="pricing.html" class="hover:text-accent-blue transition duration-300 hover-underline">Pricing</a>
+                
+                <div class="relative group">
+                    <a href="service.html" class="hover:text-accent-blue transition duration-300 hover-underline flex items-center">
+                        Services
+                        <i class="fas fa-chevron-down ml-1 text-xs transition-transform duration-300 group-hover:rotate-180"></i>
+                    </a>
+                    
+                    <div class="dropdown-menu absolute left-1/2 -translate-x-1/2 mt-3 w-screen max-w-3xl bg-deep-navy border border-deep-purple/50 rounded-lg shadow-xl opacity-0 scale-95 pointer-events-none group-hover:opacity-100 group-hover:scale-100 group-hover:pointer-events-auto origin-top transition duration-300 z-50">
+                        <div class="p-6">
+                            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                                
+                                <div>
+                                    <h4 class="font-bold text-white mb-3 border-b border-deep-purple/50 pb-2">Core Services</h4>
+                                    <ul class="space-y-1">
+                                        <li>
+                                            <a href="#" class="flex items-center p-2 -mx-2 rounded-md text-text-light hover:bg-deep-purple/50 transition duration-200">
+                                                <i class="fas fa-code w-6 text-center mr-2 text-accent-blue"></i>
+                                                Web Development
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="flex items-center p-2 -mx-2 rounded-md text-text-light hover:bg-deep-purple/50 transition duration-200">
+                                                <i class="fas fa-mobile-alt w-6 text-center mr-2 text-accent-blue"></i>
+                                                Mobile Apps
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="flex items-center p-2 -mx-2 rounded-md text-text-light hover:bg-deep-purple/50 transition duration-200">
+                                                <i class="fas fa-pencil-ruler w-6 text-center mr-2 text-accent-blue"></i>
+                                                UI/UX Design
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div>
+                                    <h4 class="font-bold text-white mb-3 border-b border-deep-purple/50 pb-2">Specialized</h4>
+                                    <ul class="space-y-1">
+                                        <li><a href="#" class="block p-2 -mx-2 rounded-md text-text-light hover:bg-deep-purple/50 transition duration-200">Cloud Infrastructure</a></li>
+                                        <li><a href="#" class="block p-2 -mx-2 rounded-md text-text-light hover:bg-deep-purple/50 transition duration-200">AI & Machine Learning</a></li>
+                                        <li><a href="#" class="block p-2 -mx-2 rounded-md text-text-light hover:bg-deep-purple/50 transition duration-200">DevOps Consulting</a></li>
+                                        <li><a href="#" class="block p-2 -mx-2 rounded-md text-text-light hover:bg-deep-purple/50 transition duration-200">Data Analytics</a></li>
+                                    </ul>
+                                </div>
+
+                                <div>
+                                    <h4 class="font-bold text-white mb-3 border-b border-deep-purple/50 pb-2">Featured</h4>
+                                    <div class="bg-deep-purple/30 p-4 rounded-lg hover:bg-deep-purple/50 transition">
+                                        <i class="fas fa-star text-accent-blue text-2xl mb-2"></i>
+                                        <h5 class="font-semibold text-white">Quantum Core</h5>
+                                        <p class="text-sm text-text-muted">Our next-gen processing solution.</p>
+                                        <a href="#" class="text-sm text-accent-blue hover:underline mt-2 inline-block">Learn More &rarr;</a>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a href="faq.html" class="hover:text-accent-blue transition duration-300 hover-underline">FAQ</a>
+                <a href="application.html" class="hover:text-accent-blue transition duration-300 hover-underline">Applications</a>
+                
+                <a href="#" class="px-4 py-1.5 -mt-1 text-base font-semibold border-2 border-accent-blue text-accent-blue rounded-lg 
+                                      transition duration-300 ease-in-out transform 
+                                      hover:bg-accent-blue/20 hover:text-white hover:shadow-lg hover:shadow-accent-blue/30">
+                    Client Login
+                </a>
+                </div>
+
+            <button class="md:hidden text-text-light text-xl hover:text-accent-blue transition duration-300" id="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+        
+        <div id="mobile-menu" class="hidden md:hidden bg-deep-navy/95 border-t border-deep-purple/50 text-base">
+            <a href="about-us.html" class="block py-3 px-6 hover:bg-deep-purple transition duration-200">About Us</a>
+            <a href="#services" class="block py-3 px-6 bg-deep-purple/20 transition duration-200 font-semibold">Services</a>
+            <a href="#service-web" class="block py-1 pl-10 text-sm hover:bg-deep-purple/50 transition duration-200">Web Development</a>
+            <a href="#service-mobile" class="block py-1 pl-10 text-sm hover:bg-deep-purple/50 transition duration-200">Mobile Apps</a>
+            <a href="#service-design" class="block py-1 pl-10 text-sm hover:bg-deep-purple/50 transition duration-200">UI/UX Design</a>
+            <a href="#service-cloud" class="block py-1 pl-10 text-sm hover:bg-deep-purple/50 transition duration-200">Cloud Infrastructure</a>
+            <a href="#faq" class="block py-3 px-6 hover:bg-deep-purple transition duration-200">FAQ</a>
+            <a href="#contact" class="block py-3 px-6 hover:bg-deep-purple transition duration-200">Book a Demo</a>
+        </div>
+    </header>
+
+
+            <!-- About Us Hero Section -->
+    <section class="pt-32 pb-20 hero-bg-gradient relative overflow-hidden">
+        <div class="blob-shape top-1/4 -left-20 animate-blob"></div>
+        <div class="blob-shape bottom-1/4 -right-20 animate-blob animation-delay-2000"></div>
+        
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="max-w-6xl mx-auto">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div data-animation-class="animate-fade-up" data-animation-delay="0.1">
+                        <h1 class="text-4xl md:text-6xl font-bold text-white mb-6">About <span class="text-accent-blue">DESIGN CODE IT</span></h1>
+                        <p class="text-xl text-text-muted mb-8 leading-relaxed">
+                            We are pioneers in digital innovation, crafting elegant solutions that power the future of businesses worldwide. 
+                            Our team of experts combines technical excellence with creative vision to deliver transformative digital experiences.
+                        </p>
+                        <div class="flex flex-col sm:flex-row gap-4">
+                            <a href="#contact" class="inline-block px-8 py-3 text-base font-semibold bg-accent-blue text-deep-navy rounded-full shadow-lg transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-[0_0_25px_rgba(100,255,218,0.8)]">
+                                Get Started
+                            </a>
+                            <a href="#our-story" class="px-8 py-3 border-2 border-accent-blue text-accent-blue font-semibold rounded-lg transition duration-300 hover:bg-accent-blue/10">
+                                Our Story
+                            </a>
+                        </div>
+                    </div>
+                    <div class="relative" data-animation-class="animate-fade-up" data-animation-delay="0.3">
+                        <div class="corner-border-card bg-deep-navy/50  p-8">
+                            <div class="corner-border-span">
+                                <div class="grid grid-cols-2 gap-6 text-center">
+                                    <div class="p-4">
+                                        <div class="text-3xl font-bold text-accent-blue counter-value" data-target="150">300+</div>
+                                        <div class="text-text-muted mt-2">Projects</div>
+                                    </div>
+                                    <div class="p-4">
+                                        <div class="text-3xl font-bold text-accent-blue counter-value" data-target="50">200+</div>
+                                        <div class="text-text-muted mt-2">Clients</div>
+                                    </div>
+                                    <div class="p-4">
+                                        <div class="text-3xl font-bold text-accent-blue counter-value" data-target="5">10+</div>
+                                        <div class="text-text-muted mt-2">Years</div>
+                                    </div>
+                                    <div class="p-4">
+                                        <div class="text-3xl font-bold text-accent-blue counter-value" data-target="24">10+</div>
+                                        <div class="text-text-muted mt-2">Team Members</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Story Section -->
+    <section id="our-story" class="py-16 bg-gradient-to-b from-deep-navy to-gradient-start relative overflow-hidden">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="max-w-4xl mx-auto text-center mb-16" data-animation-class="animate-fade-up" data-animation-delay="0.1">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Our <span class="text-accent-blue">Story</span></h2>
+                <p class="text-xl text-text-muted">From humble beginnings to industry pioneers</p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div data-animation-class="animate-fade-up" data-animation-delay="0.2">
+                    <div class="corner-border-card bg-deep-navy/70  p-8">
+                        <div class="corner-border-span">
+                            <h3 class="text-2xl font-bold text-white mb-6">Our Journey</h3>
+                            <div class="space-y-6">
+                                <div class="flex items-start">
+                                    <div class="w-12 h-12 rounded-full bg-gradient-to-r from-accent-blue to-deep-purple flex items-center justify-center mr-4 flex-shrink-0">
+                                        <i class="fas fa-rocket text-white"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="text-lg font-semibold text-white mb-2">Founded in 2020</h4>
+                                        <p class="text-text-muted">Started with a vision to bridge the gap between design and technology.</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <div class="w-12 h-12 rounded-full bg-gradient-to-r from-accent-blue to-deep-purple flex items-center justify-center mr-4 flex-shrink-0">
+                                        <i class="fas fa-chart-line text-white"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="text-lg font-semibold text-white mb-2">Rapid Growth</h4>
+                                        <p class="text-text-muted">Expanded from 3 founders to a team of 24 experts in just 3 years.</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <div class="w-12 h-12 rounded-full bg-gradient-to-r from-accent-blue to-deep-purple flex items-center justify-center mr-4 flex-shrink-0">
+                                        <i class="fas fa-trophy text-white"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="text-lg font-semibold text-white mb-2">Industry Recognition</h4>
+                                        <p class="text-text-muted">Awarded for innovation in digital transformation and user experience.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div data-animation-class="animate-fade-up" data-animation-delay="0.3">
+                    <h3 class="text-2xl font-bold text-white mb-6">Our Mission & Vision</h3>
+                    <div class="space-y-6">
+                        <div class="bg-deep-navy/50  p-6 border-l-4 border-accent-blue">
+                            <h4 class="text-xl font-semibold text-white mb-3">Mission</h4>
+                            <p class="text-text-muted">
+                                To empower businesses with cutting-edge digital solutions that drive growth, enhance user experiences, 
+                                and transform industries through innovative technology and design.
+                            </p>
+                        </div>
+                        <div class="bg-deep-navy/50  p-6 border-l-4 border-deep-purple">
+                            <h4 class="text-xl font-semibold text-white mb-3">Vision</h4>
+                            <p class="text-text-muted">
+                                We envision a world where technology seamlessly integrates with human needs, creating intuitive 
+                                digital ecosystems that anticipate and adapt to evolving challenges.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Values Section -->
+    <section class="py-16 bg-gradient-to-b from-gradient-start to-deep-navy relative overflow-hidden">
+        <div class="blob-shape top-1/3 left-1/4 animate-blob"></div>
+        <div class="blob-shape bottom-1/3 right-1/4 animate-blob animation-delay-2000"></div>
+        
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-16" data-animation-class="animate-fade-up" data-animation-delay="0.1">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Our <span class="text-accent-blue">Values</span></h2>
+                <p class="text-xl text-text-muted max-w-2xl mx-auto">The principles that guide everything we do</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="corner-border-card bg-deep-navy/70  p-6 text-center" data-animation-class="animate-fade-up" data-animation-delay="0.2">
+                    <div class="corner-border-span">
+                        <div class="w-16 h-16 rounded-full bg-gradient-to-r from-accent-blue to-cyan-500 flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-lightbulb text-white text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3">Innovation</h3>
+                        <p class="text-text-muted">Pushing boundaries with creative technological solutions and forward-thinking approaches.</p>
+                    </div>
+                </div>
+                
+                <div class="corner-border-card bg-deep-navy/70  p-6 text-center" data-animation-class="animate-fade-up" data-animation-delay="0.3">
+                    <div class="corner-border-span">
+                        <div class="w-16 h-16 rounded-full bg-gradient-to-r from-green-400 to-emerald-600 flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-star text-white text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3">Excellence</h3>
+                        <p class="text-text-muted">Delivering quality that exceeds expectations in every project and interaction.</p>
+                    </div>
+                </div>
+                
+                <div class="corner-border-card bg-deep-navy/70  p-6 text-center" data-animation-class="animate-fade-up" data-animation-delay="0.4">
+                    <div class="corner-border-span">
+                        <div class="w-16 h-16 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-users text-white text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3">Collaboration</h3>
+                        <p class="text-text-muted">Working together with clients and team members to achieve extraordinary results.</p>
+                    </div>
+                </div>
+                
+                <div class="corner-border-card bg-deep-navy/70  p-6 text-center" data-animation-class="animate-fade-up" data-animation-delay="0.5">
+                    <div class="corner-border-span">
+                        <div class="w-16 h-16 rounded-full bg-gradient-to-r from-yellow-400 to-orange-500 flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-shield-alt text-white text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3">Integrity</h3>
+                        <p class="text-text-muted">Building trust through transparency, honesty, and ethical business practices.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+ 
+    <footer id="contact" class="bg-gradient-to-r from-gradient-start to-deep-purple border-t border-deep-purple/60 py-12">
+        <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div class="col-span-1 md:col-span-2">
+                <a href="#" class="text-3xl font-bold text-accent-blue tracking-wider mb-4 block">
+                    <i class="fas fa-rocket mr-2"></i>DESIGN CODE IT
+                </a>
+                <p class="text-text-muted max-w-xs">Pioneering the next era of digital infrastructure with elegance and power.</p>
+            </div>
+            <div>
+                <h4 class="text-xl font-semibold text-white mb-4">Quick Links</h4>
+                <ul class="space-y-2">
+                    <li><a href="about-us.html" class="text-text-muted hover:text-accent-blue transition duration-300">About Us</a></li>
+                    <li><a href="service.html" class="text-text-muted hover:text-accent-blue transition duration-300">Services</a></li>
+                    <li><a href="product.html" class="text-text-muted hover:text-accent-blue transition duration-300">Products</a></li>
+                    <li><a href="faq.html" class="text-text-muted hover:text-accent-blue transition duration-300">FAQ</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-xl font-semibold text-white mb-4">Connect</h4>
+                <div class="flex space-x-4 text-2xl">
+                    <a href="#" class="text-text-muted hover:text-accent-blue transition duration-300 transform hover:scale-125"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="text-text-muted hover:text-accent-blue transition duration-300 transform hover:scale-125"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="text-text-muted hover:text-accent-blue transition duration-300 transform hover:scale-125"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="text-text-muted hover:text-accent-blue transition duration-300 transform hover:scale-125"><i class="fab fa-youtube"></i></a>
+                </div>
+                <p class="text-sm text-text-muted mt-6">&copy; 2025 DESIGN CODE IT. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>  
+</body>
+</html>

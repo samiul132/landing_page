@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DESIGN CODE IT</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+
+        
+</head>
+
+<body class="bg-deep-navy text-text-light">
+    <div id="atmosphere"></div>
+    <header class="fixed top-0 left-0 right-0 z-50 bg-deep-navy/90 backdrop-blur-sm shadow-lg border-b border-deep-purple/50">
+        <nav class="container mx-auto px-4 sm:px-6 lg:px-8 py-5 flex justify-between items-center">
+            <a href="#" class="text-3xl font-bold text-accent-blue tracking-wider">
+                <i class="fas fa-rocket mr-2"></i>DESIGN CODE IT
+            </a>
+            
+            <div class="hidden md:flex space-x-10 text-text-light text-base font-medium"> 
+                <a href="index.html" class="hover:text-accent-blue transition duration-300 hover-underline">Home</a>
+                <a href="about-us.html" class="hover:text-accent-blue transition duration-300 hover-underline">About Us</a>
+                <a href="product.html" class="hover:text-accent-blue transition duration-300 hover-underline">Products</a>
+                <a href="pricing.html" class="hover:text-accent-blue transition duration-300 hover-underline">Pricing</a>
+                
+                <div class="relative group">
+                    <a href="service.html" class="hover:text-accent-blue transition duration-300 hover-underline flex items-center">
+                        Services
+                        <i class="fas fa-chevron-down ml-1 text-xs transition-transform duration-300 group-hover:rotate-180"></i>
+                    </a>
+                    
+                    <div class="dropdown-menu absolute left-1/2 -translate-x-1/2 mt-3 w-screen max-w-3xl bg-deep-navy border border-deep-purple/50 rounded-lg shadow-xl opacity-0 scale-95 pointer-events-none group-hover:opacity-100 group-hover:scale-100 group-hover:pointer-events-auto origin-top transition duration-300 z-50">
+                        <div class="p-6">
+                            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                                
+                                <div>
+                                    <h4 class="font-bold text-white mb-3 border-b border-deep-purple/50 pb-2">Core Services</h4>
+                                    <ul class="space-y-1">
+                                        <li>
+                                            <a href="#" class="flex items-center p-2 -mx-2 rounded-md text-text-light hover:bg-deep-purple/50 transition duration-200">
+                                                <i class="fas fa-code w-6 text-center mr-2 text-accent-blue"></i>
+                                                Web Development
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="flex items-center p-2 -mx-2 rounded-md text-text-light hover:bg-deep-purple/50 transition duration-200">
+                                                <i class="fas fa-mobile-alt w-6 text-center mr-2 text-accent-blue"></i>
+                                                Mobile Apps
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="flex items-center p-2 -mx-2 rounded-md text-text-light hover:bg-deep-purple/50 transition duration-200">
+                                                <i class="fas fa-pencil-ruler w-6 text-center mr-2 text-accent-blue"></i>
+                                                UI/UX Design
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div>
+                                    <h4 class="font-bold text-white mb-3 border-b border-deep-purple/50 pb-2">Specialized</h4>
+                                    <ul class="space-y-1">
+                                        <li><a href="#" class="block p-2 -mx-2 rounded-md text-text-light hover:bg-deep-purple/50 transition duration-200">Cloud Infrastructure</a></li>
+                                        <li><a href="#" class="block p-2 -mx-2 rounded-md text-text-light hover:bg-deep-purple/50 transition duration-200">AI & Machine Learning</a></li>
+                                        <li><a href="#" class="block p-2 -mx-2 rounded-md text-text-light hover:bg-deep-purple/50 transition duration-200">DevOps Consulting</a></li>
+                                        <li><a href="#" class="block p-2 -mx-2 rounded-md text-text-light hover:bg-deep-purple/50 transition duration-200">Data Analytics</a></li>
+                                    </ul>
+                                </div>
+
+                                <div>
+                                    <h4 class="font-bold text-white mb-3 border-b border-deep-purple/50 pb-2">Featured</h4>
+                                    <div class="bg-deep-purple/30 p-4 rounded-lg hover:bg-deep-purple/50 transition">
+                                        <i class="fas fa-star text-accent-blue text-2xl mb-2"></i>
+                                        <h5 class="font-semibold text-white">Quantum Core</h5>
+                                        <p class="text-sm text-text-muted">Our next-gen processing solution.</p>
+                                        <a href="#" class="text-sm text-accent-blue hover:underline mt-2 inline-block">Learn More &rarr;</a>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a href="faq.html" class="hover:text-accent-blue transition duration-300 hover-underline">FAQ</a>
+                <a href="application.html" class="hover:text-accent-blue transition duration-300 hover-underline">Applications</a>
+                
+                <a href="#" class="px-4 py-1.5 -mt-1 text-base font-semibold border-2 border-accent-blue text-accent-blue rounded-lg 
+                                      transition duration-300 ease-in-out transform 
+                                      hover:bg-accent-blue/20 hover:text-white hover:shadow-lg hover:shadow-accent-blue/30">
+                    Client Login
+                </a>
+                </div>
+
+            <button class="md:hidden text-text-light text-xl hover:text-accent-blue transition duration-300" id="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+        
+        <div id="mobile-menu" class="hidden md:hidden bg-deep-navy/95 border-t border-deep-purple/50 text-base">
+            <a href="about-us.html" class="block py-3 px-6 hover:bg-deep-purple transition duration-200">About Us</a>
+            <a href="#services" class="block py-3 px-6 bg-deep-purple/20 transition duration-200 font-semibold">Services</a>
+            <a href="#service-web" class="block py-1 pl-10 text-sm hover:bg-deep-purple/50 transition duration-200">Web Development</a>
+            <a href="#service-mobile" class="block py-1 pl-10 text-sm hover:bg-deep-purple/50 transition duration-200">Mobile Apps</a>
+            <a href="#service-design" class="block py-1 pl-10 text-sm hover:bg-deep-purple/50 transition duration-200">UI/UX Design</a>
+            <a href="#service-cloud" class="block py-1 pl-10 text-sm hover:bg-deep-purple/50 transition duration-200">Cloud Infrastructure</a>
+            <a href="#faq" class="block py-3 px-6 hover:bg-deep-purple transition duration-200">FAQ</a>
+            <a href="#contact" class="block py-3 px-6 hover:bg-deep-purple transition duration-200">Book a Demo</a>
+        </div>
+    </header>
+
+    <section id="hero" class="relative min-h-screen flex items-end justify-center text-center overflow-hidden pb-16 md:pb-24">
+
+        <video autoplay muted loop playsinline class="absolute top-0 left-0 w-full h-full object-cover z-0">
+            <source src="assets/videos/Welcome-video.mp4" type="video/mp4">
+        </video>
+
+        <div class="absolute top-0 left-0 w-full h-full bg-deep-navy/70 z-10"></div>
+
+        <div class="blob-shape top-1/4 left-1/4 animate-blob opacity-60 z-20"></div>
+        <div class="blob-shape bottom-0 right-0 animate-blob animation-delay-3000 opacity-40 z-20" style="animation-delay: 3s;"></div>
+
+        <div class="relative z-30 p-6 mx-auto md:mx-16 mt-28 md:mt-0" data-animation-class="animate-fade-up">
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white mb-4 leading-snug" data-animation-delay="0.1">
+                <span class="text-accent-blue">E-Näsa</span> turns real-time odor data into actions that protect people, products, and the planet 
+            </h1>
+            <a href="#services" class="inline-block px-8 py-3 text-base font-semibold bg-accent-blue text-deep-navy rounded-full shadow-lg transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-[0_0_25px_rgba(100,255,218,0.8)]">
+                Get Started <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+        </div>
+    </section>
+
+    <section id="services" class="py-20 bg-deep-navy" data-section>
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-16 text-white" data-animation-class="animate-fade-up">
+                Key <span class="text-accent-blue">Features</span>
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                
+                <div class="group p-8 bg-gradient-to-br from-deep-navy to-deep-purple/20 shadow-2xl transition duration-500 ease-in-out hover:scale-[1.02] hover:-translate-y-2 hover:shadow-[0_10px_30px_rgba(77,29,124,0.5)] corner-border-card" data-animation-class="animate-fade-up" data-animation-delay="0.1">
+                    <span class="corner-border-span absolute inset-0"></span>
+                    
+                    <div class="text-4xl text-accent-blue mb-4"><i class="fas fa-bolt"></i></div>
+                    
+                    <h3 class="text-xl font-semibold mb-3 text-white">Hyper Speed</h3>
+                    <p class="text-text-muted">Lightning-fast performance powered by cutting-edge infrastructure.</p>
+                </div>
+
+                <div class="group p-8 bg-gradient-to-br from-deep-navy to-deep-purple/20 shadow-2xl transition duration-500 ease-in-out hover:scale-[1.02] hover:-translate-y-2 hover:shadow-[0_10px_30px_rgba(77,29,124,0.5)] corner-border-card" data-animation-class="animate-fade-up" data-animation-delay="0.3">
+                    <span class="corner-border-span absolute inset-0"></span>
+
+                    <div class="text-4xl text-accent-blue mb-4"><i class="fas fa-shield-alt"></i></div>
+                    
+                    <h3 class="text-xl font-semibold mb-3 text-white">Zero Downtime</h3>
+                    <p class="text-text-muted">Reliable, secure systems with a guaranteed 99.99% uptime service level.</p>
+                </div>
+
+                <div class="group p-8 bg-gradient-to-br from-deep-navy to-deep-purple/20 shadow-2xl transition duration-500 ease-in-out hover:scale-[1.02] hover:-translate-y-2 hover:shadow-[0_10px_30px_rgba(77,29,124,0.5)] corner-border-card" data-animation-class="animate-fade-up" data-animation-delay="0.5">
+                    <span class="corner-border-span absolute inset-0"></span>
+
+                    <div class="text-4xl text-accent-blue mb-4"><i class="fas fa-rocket"></i></div>
+                    
+                    <h3 class="text-xl font-semibold mb-3 text-white">Scalable Growth</h3>
+                    <p class="text-text-muted">Effortlessly scale resources up or down to meet your evolving demands.</p>
+                </div>
+
+                <div class="group p-8 bg-gradient-to-br from-deep-navy to-deep-purple/20 shadow-2xl transition duration-500 ease-in-out hover:scale-[1.02] hover:-translate-y-2 hover:shadow-[0_10px_30px_rgba(77,29,124,0.5)] corner-border-card" data-animation-class="animate-fade-up" data-animation-delay="0.7">
+                    <span class="corner-border-span absolute inset-0"></span>
+
+                    <div class="text-4xl text-accent-blue mb-4"><i class="fas fa-cogs"></i></div>
+                    
+                    <h3 class="text-xl font-semibold mb-3 text-white">Full Automation</h3>
+                    <p class="text-text-muted">Automated workflows to save time and reduce manual configuration errors.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-6 bg-gradient-to-b from-deep-navy to-deep-purple/30 relative overflow-hidden">
+    <div class="container mx-auto px-4">
+        <div class="flex flex-col md:flex-row items-center justify-between gap-8">
+            <!-- Nose Image on Left -->
+            <div class="md:w-2/5 flex justify-center" data-animation-class="animate-fade-up">
+                <img src="assets/images/nose_iamge.png" alt="E-Näsa Technology" class="max-w-full h-auto max-h-80 bounce-rotate" style="margin-right: -700px; margin-bottom: 100px;">
+            </div>
+                
+                <div class="relative h-80 flex items-center justify-center">
+                    <canvas id="smokeCanvas" class="w-full h-full"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <section class="py-16 bg-gradient-to-r from-deep-purple to-deep-navy/80" data-section>
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div class="p-4" data-animation-class="animate-fade-up" data-animation-delay="0.1">
+                    <div class="text-5xl font-extrabold text-accent-blue mb-2">
+                        <span class="counter-value" data-target="2500">0</span>+
+                    </div>
+                    <p class="text-text-light text-lg">Happy Clients</p>
+                </div>
+                <div class="p-4" data-animation-class="animate-fade-up" data-animation-delay="0.3">
+                    <div class="text-5xl font-extrabold text-accent-blue mb-2">
+                        <span class="counter-value" data-target="1800">0</span>+
+                    </div>
+                    <p class="text-text-light text-lg">Projects Done</p>
+                </div>
+                <div class="p-4" data-animation-class="animate-fade-up" data-animation-delay="0.5">
+                    <div class="text-5xl font-extrabold text-accent-blue mb-2">
+                        <span class="counter-value" data-target="15">0</span>
+                    </div>
+                    <p class="text-text-light text-lg">Awards Won</p>
+                </div>
+                <div class="p-4" data-animation-class="animate-fade-up" data-animation-delay="0.7">
+                    <div class="text-5xl font-extrabold text-accent-blue mb-2">
+                        <span class="counter-value" data-target="99">0</span>%
+                    </div>
+                    <p class="text-text-light text-lg">Satisfaction Rate</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="products" class="py-24 bg-deep-navy relative overflow-hidden" data-section>
+        <div class="blob-shape top-1/4 left-0 animate-blob opacity-30"></div>
+        <div class="blob-shape bottom-0 right-1/4 animate-blob animation-delay-3000 opacity-30" style="animation-delay:3s;"></div>
+
+        <div class="container mx-auto px-4">
+            <h2 class="text-5xl font-bold text-center mb-20 text-white" data-animation-class="animate-fade-up">
+                Our Top <span class="text-accent-blue">Products</span>
+            </h2>
+
+            <div class="flex flex-col md:flex-row items-center gap-12 mb-20 group" data-animation-class="animate-fade-up" data-animation-delay="0.1">
+                <div class="md:w-1/2 relative overflow-hidden rounded-xl shadow-2xl border border-deep-purple/50">
+                    <img src="assets/images/61891faac074a06416fff5c2_Smart Home_924x924.jpg" alt="Quantum Core" class="w-full h-80 object-cover transition duration-700 ease-in-out group-hover:scale-105 group-hover:brightness-110">
+                    
+                    <div class="absolute inset-0 bg-gradient-to-t from-deep-navy/70 via-deep-navy/40 to-transparent opacity-0 group-hover:opacity-100 transition duration-700"></div>
+                </div>
+                <div class="md:w-1/2 space-y-4">
+                    <h3 class="text-3xl md:text-4xl font-bold text-white">The smartest and most powerful air quality measuring device</h3>
+                    <p class="text-text-muted text-lg">
+                        With the air-Q, you can monitor the air quality precisely in real time, analyze and detect sources of air pollutants or simply keep an eye on the "used" air - for a healthy life, restful sleep and productive work.
+                    </p>
+                    <a href="#" class="inline-block mt-4 px-6 py-3 bg-accent-blue text-deep-navy font-semibold rounded-full shadow-lg transition transform hover:scale-105 hover:shadow-[0_0_25px_rgba(100,255,218,0.8)]">
+                        Learn More <i class="fas fa-angle-right ml-2"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="flex flex-col md:flex-row-reverse items-center gap-12 mb-20 group" data-animation-class="animate-fade-up" data-animation-delay="0.3">
+                <div class="md:w-1/2 relative overflow-hidden rounded-xl shadow-2xl border border-deep-purple/50">
+                    <img src="assets/images/624711aa1c22c232f01104ae_Slider_air-Q_science_labor.jpg" alt="Aura Shield" class="w-full h-80 object-cover transition duration-700 ease-in-out group-hover:scale-105 group-hover:brightness-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-deep-navy/70 via-deep-navy/40 to-transparent opacity-0 group-hover:opacity-100 transition duration-700"></div>
+                </div>
+                <div class="md:w-1/2 space-y-4">
+                    <h3 class="text-3xl md:text-4xl font-bold text-white">Everything in view with the air-Q smartphone app and web app</h3>
+                    <p class="text-text-muted text-lg">
+                       Check the air quality in your home or office at any time and from anywhere. The → air-Q app is the hub of your smart air analyzer. Even more: receive push notifications on your smartphone or email messages in real time.
+                    </p>
+                    <a href="#" class="inline-block mt-4 px-6 py-3 bg-accent-blue text-deep-navy font-semibold rounded-full shadow-lg transition transform hover:scale-105 hover:shadow-[0_0_25px_rgba(100,255,218,0.8)]">
+                        Learn More <i class="fas fa-angle-right ml-2"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="flex flex-col md:flex-row items-center gap-12 group" data-animation-class="animate-fade-up" data-animation-delay="0.5">
+                <div class="md:w-1/2 relative overflow-hidden rounded-xl shadow-2xl border border-deep-purple/50">
+                    <img src="assets/images/6220c83c10337a1106ed09ab_smartphone mit hand_dashboard.avif" class="w-full h-80 object-cover transition duration-700 ease-in-out group-hover:scale-105 group-hover:brightness-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-deep-navy/70 via-deep-navy/40 to-transparent opacity-0 group-hover:opacity-100 transition duration-700"></div>
+                </div>
+                <div class="md:w-1/2 space-y-4">
+                    <h3 class="text-3xl md:text-4xl font-bold text-white">Smartphone app for mobile air analysis</h3>
+                    <p class="text-text-muted text-lg">
+                        Streamline your network operations with advanced routing, bandwidth control.
+                    </p>
+                    <ul class="text-text-muted list-disc list-inside space-y-2">
+                        <li>Intelligent traffic routing & load balancing</li>
+                        <li>Real-time performance monitoring</li>
+                        <li>Automated alerts & proactive troubleshooting</li>
+                    </ul>
+                    <a href="#" class="inline-block mt-4 px-6 py-3 bg-accent-blue text-deep-navy font-semibold rounded-full shadow-lg transition transform hover:scale-105 hover:shadow-[0_0_25px_rgba(100,255,218,0.8)]">
+                        Learn More <i class="fas fa-angle-right ml-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+    </section>
+
+
+
+    <section id="faq" class="py-20 bg-deep-navy/80" data-section>
+        <div class="container mx-auto px-4 max-w-3xl">
+            <h2 class="text-4xl font-bold text-center mb-16 text-white" data-animation-class="animate-fade-up">
+                Frequently Asked <span class="text-accent-blue">Questions</span>
+            </h2>
+            
+            <div id="accordion">
+                <div class="border-b border-deep-purple/60 mb-4" data-animation-class="animate-fade-up" data-animation-delay="0.1">
+                    <button class="flex justify-between items-center w-full py-4 text-left font-semibold text-lg text-white hover:text-accent-blue transition duration-300 accordion-header">
+                        How scalable are your solutions?
+                        <i class="fas fa-chevron-down transition-transform duration-300 text-accent-blue"></i>
+                    </button>
+                    <div class="accordion-content max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
+                        <p class="py-4 text-text-muted">Our solutions are built on a modular, cloud-native architecture, ensuring virtually limitless horizontal and vertical scalability to meet any demand surge.</p>
+                    </div>
+                </div>
+                <div class="border-b border-deep-purple/60 mb-4" data-animation-class="animate-fade-up" data-animation-delay="0.3">
+                    <button class="flex justify-between items-center w-full py-4 text-left font-semibold text-lg text-white hover:text-accent-blue transition duration-300 accordion-header">
+                        What kind of support do you offer?
+                        <i class="fas fa-chevron-down transition-transform duration-300 text-accent-blue"></i>
+                    </button>
+                    <div class="accordion-content max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
+                        <p class="py-4 text-text-muted">We offer 24/7/365 premium support via chat, email, and phone. Dedicated technical account managers are available for enterprise clients.</p>
+                    </div>
+                </div>
+                <div class="border-b border-deep-purple/60 mb-4" data-animation-class="animate-fade-up" data-animation-delay="0.5">
+                    <button class="flex justify-between items-center w-full py-4 text-left font-semibold text-lg text-white hover:text-accent-blue transition duration-300 accordion-header">
+                        Is your platform secure?
+                        <i class="fas fa-chevron-down transition-transform duration-300 text-accent-blue"></i>
+                    </button>
+                    <div class="accordion-content max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
+                        <p class="py-4 text-text-muted">Security is our top priority. We utilize end-to-end encryption, multi-factor authentication, and adhere to global compliance standards (ISO 27001, GDPR).</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <footer id="contact" class="bg-gradient-to-r from-gradient-start to-deep-purple border-t border-deep-purple/60 py-12">
+        <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div class="col-span-1 md:col-span-2">
+                <a href="#" class="text-3xl font-bold text-accent-blue tracking-wider mb-4 block">
+                    <i class="fas fa-rocket mr-2"></i>DESIGN CODE IT
+                </a>
+                <p class="text-text-muted max-w-xs">Pioneering the next era of digital infrastructure with elegance and power.</p>
+            </div>
+            <div>
+                <h4 class="text-xl font-semibold text-white mb-4">Quick Links</h4>
+                <ul class="space-y-2">
+                    <li><a href="about-us.html" class="text-text-muted hover:text-accent-blue transition duration-300">About Us</a></li>
+                    <li><a href="service.html" class="text-text-muted hover:text-accent-blue transition duration-300">Services</a></li>
+                    <li><a href="product.html" class="text-text-muted hover:text-accent-blue transition duration-300">Products</a></li>
+                    <li><a href="faq.html" class="text-text-muted hover:text-accent-blue transition duration-300">FAQ</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-xl font-semibold text-white mb-4">Connect</h4>
+                <div class="flex space-x-4 text-2xl">
+                    <a href="#" class="text-text-muted hover:text-accent-blue transition duration-300 transform hover:scale-125"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="text-text-muted hover:text-accent-blue transition duration-300 transform hover:scale-125"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="text-text-muted hover:text-accent-blue transition duration-300 transform hover:scale-125"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="text-text-muted hover:text-accent-blue transition duration-300 transform hover:scale-125"><i class="fab fa-youtube"></i></a>
+                </div>
+                <p class="text-sm text-text-muted mt-6">&copy; 2025 DESIGN CODE IT. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

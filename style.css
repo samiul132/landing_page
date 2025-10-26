@@ -1,0 +1,364 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+body {
+    font-family: 'Inter', sans-serif;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+.active-nav {
+    color: #rgb(100 255 218); /* accent-blue */
+}
+/* Background Gradient for Hero - Uses a large, animated background */
+.hero-bg-gradient {
+    background: linear-gradient(-45deg, #050A30, #1B003B, #0A192F, #4D1D7C);
+    background-size: 400% 400%;
+}
+
+/* Animation Classes for Scroll Reveal (Managed by JS) */
+.animate-fade-up {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+.is-visible {
+    opacity: 1;
+    transform: none;
+}
+
+/* Custom Underline Hover Effect */
+.hover-underline::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #64FFDA;
+    transition: width 0.3s ease;
+    margin-top: 2px;
+}
+.hover-underline:hover::after {
+    width: 100%;
+}
+
+/* Floating Blob */
+.blob-shape {
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    background: rgba(77, 29, 124, 0.4);
+    border-radius: 50%;
+    filter: blur(80px);
+    z-index: 0;
+}
+/* Dropdown transition */
+.dropdown-menu {
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+#products {
+    position: relative;
+}
+
+#atmosphere {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 50;
+    overflow: hidden;
+}
+
+/* bubble shape */
+/* --- 3D Floating Bubbles --- */
+.atm-bubble {
+  position: absolute;
+  bottom: -10vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  background: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.35), rgba(0,0,0,0.15));
+  box-shadow:
+    inset 2px 2px 6px rgba(255, 255, 255, 0.25),
+    inset -2px -2px 8px rgba(0, 0, 0, 0.35),
+    0 10px 20px rgba(0, 0, 0, 0.25);
+  opacity: 0.3;
+  color: #022;
+  font-weight: 600;
+  font-family: "Noto Sans Bengali", "Inter", sans-serif;
+  padding: 6px 10px;
+  text-shadow: 0 1px 0 rgba(255,255,255,0.05);
+  white-space: nowrap;
+  transform: translate3d(0,0,0);
+  will-change: transform, opacity;
+  perspective: 800px;
+  transform-style: preserve-3d;
+}
+
+/* reflection light for 3D feel */
+.atm-bubble::before {
+  content: "";
+  position: absolute;
+  top: 10%;
+  left: 15%;
+  width: 40%;
+  height: 40%;
+  background: radial-gradient(circle, rgba(255,255,255,0.8), transparent 70%);
+  border-radius: 50%;
+  transform: translateZ(5px);
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+/* keep your type-based color tints as they are */
+.atm-bubble[data-type="H2O"] { background: radial-gradient(circle at 30% 30%, rgba(173,216,230,0.4), rgba(0,0,0,0.15)); border: 1px solid rgba(173,216,230,0.4); }
+.atm-bubble[data-type="CO2"] { background: radial-gradient(circle at 30% 30%, rgba(255,235,153,0.35), rgba(0,0,0,0.15)); border: 1px solid rgba(255,235,153,0.3); }
+.atm-bubble[data-type="H2SO4"] { background: radial-gradient(circle at 30% 30%, rgba(255,160,122,0.35), rgba(0,0,0,0.15)); border: 1px solid rgba(255,160,122,0.3); }
+.atm-bubble[data-type="O2"] { background: radial-gradient(circle at 30% 30%, rgba(176,224,230,0.35), rgba(0,0,0,0.15)); border: 1px solid rgba(176,224,230,0.3); }
+.atm-bubble[data-type="N2"] { background: radial-gradient(circle at 30% 30%, rgba(200,200,255,0.35), rgba(0,0,0,0.15)); border: 1px solid rgba(200,200,255,0.3); }
+.atm-bubble[data-type="CH4"] { background: radial-gradient(circle at 30% 30%, rgba(255,182,193,0.35), rgba(0,0,0,0.15)); border: 1px solid rgba(255,182,193,0.3); }
+.atm-bubble[data-type="NH3"] { background: radial-gradient(circle at 30% 30%, rgba(144,238,144,0.35), rgba(0,0,0,0.15)); border: 1px solid rgba(144,238,144,0.3); }
+.atm-bubble[data-type="SO2"] { background: radial-gradient(circle at 30% 30%, rgba(255,222,173,0.35), rgba(0,0,0,0.15)); border: 1px solid rgba(255,222,173,0.3); }
+
+/* floating upward animation (restored + smooth) */
+@keyframes floatUp {
+  0% {
+    transform: translate3d(var(--start-x, 0), 0, 0) scale(var(--s, 1)) rotateX(0deg) rotateY(0deg);
+    opacity: 0;
+  }
+  10% { opacity: 1; }
+  50% {
+    transform: translate3d(calc(var(--start-x, 0) + var(--drift, 30px)), -50vh, 0)
+               scale(calc(var(--s,1) * 1.05))
+               rotateX(10deg) rotateY(-10deg);
+  }
+  100% {
+    transform: translate3d(calc(var(--start-x, 0) - var(--drift, 20px)), -110vh, 0)
+               scale(calc(var(--s,1) * 0.9))
+               rotateX(20deg) rotateY(20deg);
+    opacity: 0;
+  }
+}
+
+.atm-bubble.animate {
+  animation: floatUp linear forwards;
+}
+
+
+/* --- Animated Corner Border --- */
+:root {
+  --accent-color: #64FFDA;
+}
+
+.corner-border-card {
+  position: relative;
+  overflow: hidden;
+  border: 2px solid transparent; 
+  transition: all 0.5s ease-in-out;
+}
+
+.corner-border-card::before,
+.corner-border-card::after,
+.corner-border-span::before,
+.corner-border-span::after {
+  content: '';
+  position: absolute;
+  background-color: var(--accent-color);
+  transition: all 0.4s ease-out;
+}
+
+.corner-border-card::before {
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+}
+
+.corner-border-card::after {
+  bottom: 0;
+  right: 0;
+  width: 0;
+  height: 2px;
+}
+
+.corner-border-span::before {
+  top: 0;
+  left: 0;
+  width: 2px;
+  height: 0;
+}
+
+.corner-border-span::after {
+  bottom: 0;
+  right: 0;
+  width: 2px;
+  height: 0;
+}
+
+.corner-border-card:hover::before,
+.corner-border-card:hover::after {
+  width: 100%;
+}
+
+.corner-border-card:hover .corner-border-span::before,
+.corner-border-card:hover .corner-border-span::after {
+  height: 100%;
+  transition-delay: 0.2s;
+}
+
+/* Product Card Styles */
+.product-card {
+    transition: all 0.3s ease;
+    background: rgba(10, 25, 47, 0.7);
+    backdrop-filter: blur(10px);
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(100, 255, 218, 0.2);
+}
+
+.product-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.feature-list li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.feature-list li:before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #64FFDA;
+    font-weight: bold;
+}
+
+/* Pricing Toggle */
+.pricing-toggle {
+    position: relative;
+    display: inline-flex;
+    background: rgba(10, 25, 47, 0.7);
+    border-radius: 30px;
+    padding: 5px;
+}
+
+.pricing-toggle input {
+    display: none;
+}
+
+.pricing-toggle label {
+    padding: 8px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 1;
+}
+
+.pricing-toggle input:checked + label {
+    background: #64FFDA;
+    color: #0A192F;
+}
+
+.pricing-slider {
+    position: absolute;
+    height: 100%;
+    width: 50%;
+    background: #64FFDA;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    z-index: 0;
+}
+
+#monthly:checked ~ .pricing-slider {
+    transform: translateX(0);
+}
+
+#yearly:checked ~ .pricing-slider {
+    transform: translateX(100%);
+}
+
+/* Product Filter */
+.filter-btn {
+    padding: 8px 20px;
+    border-radius: 25px;
+    background: rgba(10, 25, 47, 0.7);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.filter-btn.active {
+    background: #64FFDA;
+    color: #0A192F;
+}
+
+/* Animation for price cards */
+.price-card {
+    transition: all 0.3s ease;
+}
+
+.price-card.popular {
+    transform: scale(1.05);
+    border: 2px solid #64FFDA;
+}
+
+/* Product showcase animation */
+.product-showcase {
+    position: relative;
+    overflow: hidden;
+}
+
+.product-showcase::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(100, 255, 218, 0.1) 0%, rgba(77, 29, 124, 0.1) 100%);
+    z-index: -1;
+}
+/* Smoke Animation Styles */
+#smokeCanvas {
+    width: 100%;
+    height: 100%;
+    display: block;
+    cursor: pointer;
+}
+
+.smoke-section {
+    background: linear-gradient(135deg, #0a0e17 0%, #1a0b2e 100%);
+}
+
+.element {
+    font-weight: bold;
+    color: #667eea;
+}
+.nose-image {
+    filter: drop-shadow(0 10px 20px rgba(100, 255, 218, 0.3));
+    transition: transform 0.3s ease;
+}
+
+.nose-image:hover {
+    transform: scale(1.05);
+}
+@keyframes bounceRotate {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  25% {
+    transform: translateY(-10px) rotate(10deg);
+  }
+}
+.bounce-rotate {
+  animation: bounceRotate 3s ease-in-out infinite;
+  transform-origin: center;
+}

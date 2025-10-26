@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DESIGN CODE IT</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+
+        
+</head>
+
+<body class="bg-deep-navy text-text-light">
+    <div id="atmosphere"></div>
+    <header class="fixed top-0 left-0 right-0 z-50 bg-deep-navy/90 backdrop-blur-sm shadow-lg border-b border-deep-purple/50">
+        <nav class="container mx-auto px-4 sm:px-6 lg:px-8 py-5 flex justify-between items-center">
+            <a href="#" class="text-3xl font-bold text-accent-blue tracking-wider">
+                <i class="fas fa-rocket mr-2"></i>DESIGN CODE IT
+            </a>
+            
+            <div class="hidden md:flex space-x-10 text-text-light text-base font-medium"> 
+                <a href="index.html" class="hover:text-accent-blue transition duration-300 hover-underline">Home</a>
+                <a href="about-us.html" class="hover:text-accent-blue transition duration-300 hover-underline">About Us</a>
+                <a href="product.html" class="hover:text-accent-blue transition duration-300 hover-underline">Products</a>
+                <a href="pricing.html" class="hover:text-accent-blue transition duration-300 hover-underline">Pricing</a>
+                
+                <div class="relative group">
+                    <a href="service.html" class="hover:text-accent-blue transition duration-300 hover-underline flex items-center">
+                        Services
+                        <i class="fas fa-chevron-down ml-1 text-xs transition-transform duration-300 group-hover:rotate-180"></i>
+                    </a>
+                    
+                    <div class="dropdown-menu absolute left-1/2 -translate-x-1/2 mt-3 w-screen max-w-3xl bg-deep-navy border border-deep-purple/50 rounded-lg shadow-xl opacity-0 scale-95 pointer-events-none group-hover:opacity-100 group-hover:scale-100 group-hover:pointer-events-auto origin-top transition duration-300 z-50">
+                        <div class="p-6">
+                            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                                
+                                <div>
+                                    <h4 class="font-bold text-white mb-3 border-b border-deep-purple/50 pb-2">Core Services</h4>
+                                    <ul class="space-y-1">
+                                        <li>
+                                            <a href="#" class="flex items-center p-2 -mx-2 rounded-md text-text-light hover:bg-deep-purple/50 transition duration-200">
+                                                <i class="fas fa-code w-6 text-center mr-2 text-accent-blue"></i>
+                                                Web Development
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="flex items-center p-2 -mx-2 rounded-md text-text-light hover:bg-deep-purple/50 transition duration-200">
+                                                <i class="fas fa-mobile-alt w-6 text-center mr-2 text-accent-blue"></i>
+                                                Mobile Apps
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="flex items-center p-2 -mx-2 rounded-md text-text-light hover:bg-deep-purple/50 transition duration-200">
+                                                <i class="fas fa-pencil-ruler w-6 text-center mr-2 text-accent-blue"></i>
+                                                UI/UX Design
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div>
+                                    <h4 class="font-bold text-white mb-3 border-b border-deep-purple/50 pb-2">Specialized</h4>
+                                    <ul class="space-y-1">
+                                        <li><a href="#" class="block p-2 -mx-2 rounded-md text-text-light hover:bg-deep-purple/50 transition duration-200">Cloud Infrastructure</a></li>
+                                        <li><a href="#" class="block p-2 -mx-2 rounded-md text-text-light hover:bg-deep-purple/50 transition duration-200">AI & Machine Learning</a></li>
+                                        <li><a href="#" class="block p-2 -mx-2 rounded-md text-text-light hover:bg-deep-purple/50 transition duration-200">DevOps Consulting</a></li>
+                                        <li><a href="#" class="block p-2 -mx-2 rounded-md text-text-light hover:bg-deep-purple/50 transition duration-200">Data Analytics</a></li>
+                                    </ul>
+                                </div>
+
+                                <div>
+                                    <h4 class="font-bold text-white mb-3 border-b border-deep-purple/50 pb-2">Featured</h4>
+                                    <div class="bg-deep-purple/30 p-4 rounded-lg hover:bg-deep-purple/50 transition">
+                                        <i class="fas fa-star text-accent-blue text-2xl mb-2"></i>
+                                        <h5 class="font-semibold text-white">Quantum Core</h5>
+                                        <p class="text-sm text-text-muted">Our next-gen processing solution.</p>
+                                        <a href="#" class="text-sm text-accent-blue hover:underline mt-2 inline-block">Learn More &rarr;</a>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a href="faq.html" class="hover:text-accent-blue transition duration-300 hover-underline">FAQ</a>
+                <a href="application.html" class="hover:text-accent-blue transition duration-300 hover-underline">Applications</a>
+                
+                <a href="#" class="px-4 py-1.5 -mt-1 text-base font-semibold border-2 border-accent-blue text-accent-blue rounded-lg 
+                                      transition duration-300 ease-in-out transform 
+                                      hover:bg-accent-blue/20 hover:text-white hover:shadow-lg hover:shadow-accent-blue/30">
+                    Client Login
+                </a>
+                </div>
+
+            <button class="md:hidden text-text-light text-xl hover:text-accent-blue transition duration-300" id="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+        
+        <div id="mobile-menu" class="hidden md:hidden bg-deep-navy/95 border-t border-deep-purple/50 text-base">
+            <a href="about-us.html" class="block py-3 px-6 hover:bg-deep-purple transition duration-200">About Us</a>
+            <a href="#services" class="block py-3 px-6 bg-deep-purple/20 transition duration-200 font-semibold">Services</a>
+            <a href="#service-web" class="block py-1 pl-10 text-sm hover:bg-deep-purple/50 transition duration-200">Web Development</a>
+            <a href="#service-mobile" class="block py-1 pl-10 text-sm hover:bg-deep-purple/50 transition duration-200">Mobile Apps</a>
+            <a href="#service-design" class="block py-1 pl-10 text-sm hover:bg-deep-purple/50 transition duration-200">UI/UX Design</a>
+            <a href="#service-cloud" class="block py-1 pl-10 text-sm hover:bg-deep-purple/50 transition duration-200">Cloud Infrastructure</a>
+            <a href="#faq" class="block py-3 px-6 hover:bg-deep-purple transition duration-200">FAQ</a>
+            <a href="#contact" class="block py-3 px-6 hover:bg-deep-purple transition duration-200">Book a Demo</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20 hero-bg-gradient relative overflow-hidden">
+        <div class="blob-shape top-1/4 -left-20 animate-blob"></div>
+        <div class="blob-shape bottom-1/4 -right-20 animate-blob animation-delay-2000"></div>
+        
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="max-w-4xl mx-auto text-center" data-animation-class="animate-fade-up" data-animation-delay="0.1">
+                <h1 class="text-4xl md:text-6xl font-bold text-white mb-6">Our <span class="text-accent-blue">Products</span></h1>
+                <p class="text-xl text-text-muted mb-10">Discover our suite of innovative digital solutions designed to transform your business and accelerate growth.</p>
+                
+                <!-- Product Filter -->
+                <div class="flex flex-wrap justify-center gap-4 mb-12">
+                    <button class="filter-btn active" data-filter="all">All Products</button>
+                    <button class="filter-btn" data-filter="development">Development</button>
+                    <button class="filter-btn" data-filter="design">Design</button>
+                    <button class="filter-btn" data-filter="analytics">Analytics</button>
+                    <button class="filter-btn" data-filter="infrastructure">Infrastructure</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Showcase -->
+    <section id="products" class="py-16 bg-gradient-to-b from-deep-navy to-gradient-start relative overflow-hidden">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Product 1 -->
+                <div class="product-card corner-border-card p-6 product-showcase" data-category="development">
+                    <div class="corner-border-span">
+                        <div class="product-badge bg-accent-blue text-deep-navy">NEW</div>
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 rounded-lg bg-gradient-to-r from-accent-blue to-deep-purple flex items-center justify-center mr-4">
+                                <i class="fas fa-code text-white text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-white">Quantum Core</h3>
+                        </div>
+                        <p class="text-text-muted mb-6">Next-generation development platform with AI-powered code generation and optimization.</p>
+                        
+                        <ul class="feature-list text-text-muted mb-6">
+                            <li>AI-assisted code generation</li>
+                            <li>Real-time collaboration</li>
+                            <li>Automated testing suite</li>
+                            <li>Performance analytics</li>
+                        </ul>
+                        
+                        <div class="flex justify-between items-center">
+                            <div>
+                                <span class="text-2xl font-bold text-white">$49</span>
+                                <span class="text-text-muted">/month</span>
+                            </div>
+                            <button class="px-4 py-2 bg-accent-blue text-deep-navy font-semibold rounded-lg transition duration-300 hover:scale-105 hover:shadow-[0_0_25px_rgba(100,255,218,0.8)]">
+                                Try Free
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 2 -->
+                <div class="product-card corner-border-card p-6 product-showcase" data-category="design">
+                    <div class="corner-border-span">
+                        <div class="product-badge bg-yellow-500 text-deep-navy">POPULAR</div>
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 rounded-lg bg-gradient-to-r from-yellow-400 to-orange-500 flex items-center justify-center mr-4">
+                                <i class="fas fa-palette text-white text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-white">Design Studio Pro</h3>
+                        </div>
+                        <p class="text-text-muted mb-6">Advanced design platform with collaborative tools and AI-powered design suggestions.</p>
+                        
+                        <ul class="feature-list text-text-muted mb-6">
+                            <li>AI design assistant</li>
+                            <li>Real-time collaboration</li>
+                            <li>Design system manager</li>
+                            <li>Prototype generator</li>
+                        </ul>
+                        
+                        <div class="flex justify-between items-center">
+                            <div>
+                                <span class="text-2xl font-bold text-white">$39</span>
+                                <span class="text-text-muted">/month</span>
+                            </div>
+                            <button class="px-4 py-2 bg-accent-blue text-deep-navy font-semibold rounded-lg transition duration-300 hover:scale-105 hover:shadow-[0_0_25px_rgba(100,255,218,0.8)]">
+                                Try Free
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 3 -->
+                <div class="product-card corner-border-card p-6 product-showcase" data-category="analytics">
+                    <div class="corner-border-span">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 rounded-lg bg-gradient-to-r from-green-400 to-blue-500 flex items-center justify-center mr-4">
+                                <i class="fas fa-chart-bar text-white text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-white">Data Insight</h3>
+                        </div>
+                        <p class="text-text-muted mb-6">Comprehensive analytics platform with predictive modeling and real-time data visualization.</p>
+                        
+                        <ul class="feature-list text-text-muted mb-6">
+                            <li>Predictive analytics</li>
+                            <li>Custom dashboards</li>
+                            <li>Real-time data streams</li>
+                            <li>Automated reporting</li>
+                        </ul>
+                        
+                        <div class="flex justify-between items-center">
+                            <div>
+                                <span class="text-2xl font-bold text-white">$59</span>
+                                <span class="text-text-muted">/month</span>
+                            </div>
+                            <button class="px-4 py-2 bg-accent-blue text-deep-navy font-semibold rounded-lg transition duration-300 hover:scale-105 hover:shadow-[0_0_25px_rgba(100,255,218,0.8)]">
+                                Try Free
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 4 -->
+                <div class="product-card corner-border-card p-6 product-showcase" data-category="infrastructure">
+                    <div class="corner-border-span">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 rounded-lg bg-gradient-to-r from-purple-500 to-pink-500 flex items-center justify-center mr-4">
+                                <i class="fas fa-cloud text-white text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-white">Cloud Nexus</h3>
+                        </div>
+                        <p class="text-text-muted mb-6">Scalable cloud infrastructure with automated deployment and advanced security features.</p>
+                        
+                        <ul class="feature-list text-text-muted mb-6">
+                            <li>Auto-scaling resources</li>
+                            <li>Multi-cloud deployment</li>
+                            <li>Advanced security protocols</li>
+                            <li>24/7 monitoring</li>
+                        </ul>
+                        
+                        <div class="flex justify-between items-center">
+                            <div>
+                                <span class="text-2xl font-bold text-white">$79</span>
+                                <span class="text-text-muted">/month</span>
+                            </div>
+                            <button class="px-4 py-2 bg-accent-blue text-deep-navy font-semibold rounded-lg transition duration-300 hover:scale-105 hover:shadow-[0_0_25px_rgba(100,255,218,0.8)]">
+                                Try Free
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 5 -->
+                <div class="product-card corner-border-card p-6 product-showcase" data-category="development">
+                    <div class="corner-border-span">
+                        <div class="product-badge bg-green-500 text-deep-navy">BEST VALUE</div>
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 rounded-lg bg-gradient-to-r from-blue-400 to-purple-600 flex items-center justify-center mr-4">
+                                <i class="fas fa-mobile-alt text-white text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-white">App Forge</h3>
+                        </div>
+                        <p class="text-text-muted mb-6">Cross-platform mobile app development tool with drag-and-drop interface and native performance.</p>
+                        
+                        <ul class="feature-list text-text-muted mb-6">
+                            <li>Drag-and-drop builder</li>
+                            <li>Native performance</li>
+                            <li>One-click deployment</li>
+                            <li>App store publishing</li>
+                        </ul>
+                        
+                        <div class="flex justify-between items-center">
+                            <div>
+                                <span class="text-2xl font-bold text-white">$69</span>
+                                <span class="text-text-muted">/month</span>
+                            </div>
+                            <button class="px-4 py-2 bg-accent-blue text-deep-navy font-semibold rounded-lg transition duration-300 hover:scale-105 hover:shadow-[0_0_25px_rgba(100,255,218,0.8)]">
+                                Try Free
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 6 -->
+                <div class="product-card corner-border-card p-6 product-showcase" data-category="analytics">
+                    <div class="corner-border-span">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 rounded-lg bg-gradient-to-r from-red-400 to-yellow-500 flex items-center justify-center mr-4">
+                                <i class="fas fa-shield-alt text-white text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-white">Secure Shield</h3>
+                        </div>
+                        <p class="text-text-muted mb-6">Advanced security analytics platform with threat detection and automated response systems.</p>
+                        
+                        <ul class="feature-list text-text-muted mb-6">
+                            <li>Real-time threat detection</li>
+                            <li>Automated incident response</li>
+                            <li>Compliance monitoring</li>
+                            <li>Security analytics dashboard</li>
+                        </ul>
+                        
+                        <div class="flex justify-between items-center">
+                            <div>
+                                <span class="text-2xl font-bold text-white">$89</span>
+                                <span class="text-text-muted">/month</span>
+                            </div>
+                            <button class="px-4 py-2 bg-accent-blue text-deep-navy font-semibold rounded-lg transition duration-300 hover:scale-105 hover:shadow-[0_0_25px_rgba(100,255,218,0.8)]">
+                                Try Free
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="py-16 bg-gradient-to-b from-gradient-start to-deep-navy relative overflow-hidden">
+        <div class="blob-shape top-1/3 left-1/4 animate-blob"></div>
+        <div class="blob-shape bottom-1/3 right-1/4 animate-blob animation-delay-2000"></div>
+        
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="max-w-4xl mx-auto text-center mb-16" data-animation-class="animate-fade-up" data-animation-delay="0.1">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Flexible <span class="text-accent-blue">Pricing</span> Plans</h2>
+                <p class="text-xl text-text-muted">Choose the plan that works best for your business needs</p>
+                
+                <!-- Pricing Toggle -->
+                <div class="mt-8 inline-flex items-center">
+                    <span class="mr-4 text-text-muted">Monthly</span>
+                    <div class="pricing-toggle">
+                        <input type="radio" id="monthly" name="pricing" checked>
+                        <label for="monthly" class="monthly-label">Monthly</label>
+                        
+                        <input type="radio" id="yearly" name="pricing">
+                        <label for="yearly" class="yearly-label">Yearly</label>
+                        
+                        <div class="pricing-slider"></div>
+                    </div>
+                    <span class="ml-4 text-text-muted">Yearly <span class="text-accent-blue">(Save 20%)</span></span>
+                </div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <!-- Basic Plan -->
+                <div class="price-card corner-border-card bg-deep-navy/70 p-8" data-animation-class="animate-fade-up" data-animation-delay="0.2">
+                    <div class="corner-border-span">
+                        <h3 class="text-2xl font-bold text-white mb-2">Starter</h3>
+                        <p class="text-text-muted mb-6">Perfect for small teams and individual developers</p>
+                        
+                        <div class="mb-6">
+                            <span class="text-4xl font-bold text-white">$29</span>
+                            <span class="text-text-muted">/month</span>
+                        </div>
+                        
+                        <ul class="feature-list text-text-muted mb-8 space-y-3">
+                            <li>Up to 5 team members</li>
+                            <li>10GB storage</li>
+                            <li>Basic analytics</li>
+                            <li>Email support</li>
+                            <li class="opacity-50">Advanced security</li>
+                            <li class="opacity-50">Priority support</li>
+                        </ul>
+                        
+                        <button class="w-full py-3 border-2 border-accent-blue text-accent-blue font-semibold rounded-lg transition duration-300 hover:scale-105 hover:shadow-[0_0_25px_rgba(100,255,218,0.8)]">
+                            Get Started
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Pro Plan -->
+                <div class="price-card corner-border-card bg-deep-navy/70 p-8 popular" data-animation-class="animate-fade-up" data-animation-delay="0.3">
+                    <div class="corner-border-span">
+                        <div class="text-center mb-4">
+                            <span class="inline-block px-4 py-1 bg-accent-blue text-deep-navy font-semibold rounded-full text-sm">MOST POPULAR</span>
+                        </div>
+                        
+                        <h3 class="text-2xl font-bold text-white mb-2">Professional</h3>
+                        <p class="text-text-muted mb-6">Ideal for growing businesses and development teams</p>
+                        
+                        <div class="mb-6">
+                            <span class="text-4xl font-bold text-white">$79</span>
+                            <span class="text-text-muted">/month</span>
+                        </div>
+                        
+                        <ul class="feature-list text-text-muted mb-8 space-y-3">
+                            <li>Up to 20 team members</li>
+                            <li>100GB storage</li>
+                            <li>Advanced analytics</li>
+                            <li>Priority support</li>
+                            <li>Advanced security</li>
+                            <li class="opacity-50">Dedicated account manager</li>
+                        </ul>
+                        
+                        <button class="w-full py-3 bg-accent-blue text-deep-navy font-semibold rounded-lg transition duration-300 hover:scale-105 hover:shadow-[0_0_25px_rgba(100,255,218,0.8)]">
+                            Get Started
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Enterprise Plan -->
+                <div class="price-card corner-border-card bg-deep-navy/70 p-8" data-animation-class="animate-fade-up" data-animation-delay="0.4">
+                    <div class="corner-border-span">
+                        <h3 class="text-2xl font-bold text-white mb-2">Enterprise</h3>
+                        <p class="text-text-muted mb-6">For large organizations with complex needs</p>
+                        
+                        <div class="mb-6">
+                            <span class="text-4xl font-bold text-white">$199</span>
+                            <span class="text-text-muted">/month</span>
+                        </div>
+                        
+                        <ul class="feature-list text-text-muted mb-8 space-y-3">
+                            <li>Unlimited team members</li>
+                            <li>1TB storage</li>
+                            <li>Advanced analytics</li>
+                            <li>24/7 priority support</li>
+                            <li>Advanced security</li>
+                            <li>Dedicated account manager</li>
+                        </ul>
+                        
+                        <button class="w-full py-3 border-2 border-accent-blue text-accent-blue font-semibold rounded-lg transition duration-300 hover:scale-105 hover:shadow-[0_0_25px_rgba(100,255,218,0.8)]">
+                            Contact Sales
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-gradient-to-r from-gradient-start to-deep-purple relative overflow-hidden">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="max-w-4xl mx-auto text-center" data-animation-class="animate-fade-up" data-animation-delay="0.1">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
+                <p class="text-xl text-text-muted mb-10 max-w-2xl mx-auto">Join thousands of companies that use our products to drive innovation and growth.</p>
+                
+                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                    <a href="#" class="px-8 py-3 bg-accent-blue text-deep-navy font-semibold rounded-lg transition duration-300 hover:scale-105 hover:shadow-[0_0_25px_rgba(100,255,218,0.8)]">
+                        Start Free Trial
+                    </a>
+                    <a href="#" class="px-8 py-3 border-2 border-accent-blue text-accent-blue font-semibold rounded-lg transition duration-300 hover:bg-accent-blue/10">
+                        Schedule a Demo
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact" class="bg-gradient-to-r from-gradient-start to-deep-purple border-t border-deep-purple/60 py-12">
+        <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div class="col-span-1 md:col-span-2">
+                <a href="#" class="text-3xl font-bold text-accent-blue tracking-wider mb-4 block">
+                    <i class="fas fa-rocket mr-2"></i>DESIGN CODE IT
+                </a>
+                <p class="text-text-muted max-w-xs">Pioneering the next era of digital infrastructure with elegance and power.</p>
+            </div>
+            <div>
+                <h4 class="text-xl font-semibold text-white mb-4">Quick Links</h4>
+                <ul class="space-y-2">
+                    <li><a href="about-us.html" class="text-text-muted hover:text-accent-blue transition duration-300">About Us</a></li>
+                    <li><a href="service.html" class="text-text-muted hover:text-accent-blue transition duration-300">Services</a></li>
+                    <li><a href="product.html" class="text-text-muted hover:text-accent-blue transition duration-300">Products</a></li>
+                    <li><a href="faq.html" class="text-text-muted hover:text-accent-blue transition duration-300">FAQ</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-xl font-semibold text-white mb-4">Connect</h4>
+                <div class="flex space-x-4 text-2xl">
+                    <a href="#" class="text-text-muted hover:text-accent-blue transition duration-300 transform hover:scale-125"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="text-text-muted hover:text-accent-blue transition duration-300 transform hover:scale-125"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="text-text-muted hover:text-accent-blue transition duration-300 transform hover:scale-125"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="text-text-muted hover:text-accent-blue transition duration-300 transform hover:scale-125"><i class="fab fa-youtube"></i></a>
+                </div>
+                <p class="text-sm text-text-muted mt-6">&copy; 2025 DESIGN CODE IT. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>  
+</body>
+</html>
